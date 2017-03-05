@@ -1,0 +1,22 @@
+city:通辽
+
+data:03-05		day:多云(-2°C )		night:多云( -12°C)
+
+data:03-06		day:多云(-2°C )		night:多云( -11°C)
+
+data:03-07		day:晴(2°C )		night:多云( -9°C)
+
+data:03-08		day:晴(5°C )		night:晴( -6°C)
+
+data:03-09		day:晴(5°C )		night:晴( -6°C)
+
+data:03-10		day:多云(9°C )		night:晴( -3°C)
+
+data:03-11		day:多云(8°C )		night:多云( -3°C)
+
+data:03-12		day:晴(7°C )		night:晴( -4°C)
+
+data:03-13		day:少云(8°C )		night:晴( -4°C)
+
+data:03-14		day:局部多云(8°C )		night:少云( -3°C)
+
