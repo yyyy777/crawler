@@ -4,7 +4,7 @@ import re
 import random
 import time
 import requests
-from requests.exceptions import ConnectionError
+#from requests.exceptions import ConnectionError
 
 
 class download(object):
