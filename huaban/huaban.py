@@ -8,6 +8,7 @@ from selenium import webdriver
 
 from urllib.request import urlretrieve
 
+
 class crawl_huaban:
 
     def __init__(self,url):
