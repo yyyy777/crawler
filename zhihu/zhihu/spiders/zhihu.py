@@ -1,13 +1,15 @@
 # coding=utf-8
 import json
 from scrapy import Spider, Request
+from scrapy_redis.spiders import RedisSpider
 
 from zhihu.items import ZhihuUserItem
 
 
-class ZhihuUserSpider(Spider):
+class ZhihuUserSpider(RedisSpider):
     name = 'zhihuuser'
     allowed_domains = ["www.zhihu.com"]
+    redis_key = "zhihuuser:start_urls"
     user_url = 'https://www.zhihu.com/api/v4/members/{user}?include={include}'
     follows_url = 'https://www.zhihu.com/api/v4/members/{user}/followees?include={include}&offset={offset}&limit={limit}'
     followers_url = 'https://www.zhihu.com/api/v4/members/{user}/followers?include={include}&offset={offset}&limit={limit}'
