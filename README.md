@@ -27,3 +27,6 @@ scrapy爬取新浪天气
 
 ## zhihu
 scrapy-redis分布式爬取知乎全部用户的信息。使用 scrapy 通过知乎的 API爬取，redis做分布式链接。从一个人的关注列表开始，递归爬取所有关注的人和被关注者，从而实现爬取整个知乎上所有进行过关注和被关注的人的信息。没有关注的人且没有被关注的用户不进行爬取。爬取下来的所有信息存入到 MongoDB 中。
+
+##gpcrawler
+scrapy爬取googleplay上的app包名
