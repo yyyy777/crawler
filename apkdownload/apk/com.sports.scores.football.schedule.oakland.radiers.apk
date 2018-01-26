@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Download APKs Directly From Google Play To Your Computer With APK Downloader Extension For Google Chrome">
+<meta name="msvalidate.01" content="E09357EA5F3A771DC1BC1CF6C0256F3D" />
+<meta name="theme-color" content="#87bc4e">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<script src="/cdn-cgi/apps/head/oeS5dnF2VuWN6NV8avmFeaBH-3o.js"></script><link rel="publisher" href="https://plus.google.com/+Evozi" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="icon" sizes="192x192" href="https://apps.evozi.com/apk-downloader/assets/img/mini_icon.png" />
+<title>APK Downloader [Latest] Download Directly | Chrome Extension v3 (Evozi Official)</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="assets/css/main.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write(unescape("<script type='text/javascript' src='//code.jquery.com/jquery-3.2.1.min.js'><\/script>"))</script>
+<script>
+    var loc = window.parent.location.toString();
+    if (loc.indexOf("RemoteRunner.html")!=-1) {
+      document.location="httpss://apps.evozi.com/";
+    }
+
+    try {
+        if (window.document.documentElement.getAttribute("webdriver")) return !+[]
+    } catch (IDLMrxxel) {}
+    try {
+        if ("_Selenium_IDE_Recorder" in window) return !+""
+    } catch (KknKsUayS) {}
+    try {
+        if ("__webdriver_script_fn" in document) return !+""
+    } catch(e){}
+
+    if (window.callPhantom || window._phantom) {
+        document.location="https://apps.evozi.com/";
+    }
+    </script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" style="float:none" href="//apps.evozi.com/apk-downloader/"><img src="assets/img/mini_icon.png" width="45" height="45" alt="APK Downloader" style="display:inline"> APK Downloader</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+<li class="active"><a href="https://apps.evozi.com/apk-downloader/">Home</a></li>
+<li><a href="//apps.evozi.com/apk-downloader/#discuss">Comment</a></li>
+<li><a href="/cdn-cgi/l/email-protection#c0a5ada1a9aceba4ada3a180a5b6afbaa9eea3afad">DMCA Report</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="panel col-12 col-lg-6 col-lg-offset-3">
+<div class="form-group panel-body">
+<!--[if lt IE 9]>
+            <div class="alert alert-danger">Your browser you are using is <strong>too old</strong>. Please upgrade</div>
+            <![endif]-->
+<label for="packagename">Package name or Google Play URL</label>
+<div class="pull-right">
+<a href="https://play.google.com/store/apps/details?id=com.evozi.injector" title="Get app link and paste in the box" target="_blank"><span class="glyphicon glyphicon-new-window"></span> Visit Play Store </a>
+</div>
+<input type="hidden" id="packagename" />
+<input type="text" id="iBRBPJTnmoHTsWhk" class="form-control input-lg" placeholder="com.evozi.deviceid or https://play.google.com/store/apps/details?id=" value="com.sports.scores.football.schedule.oakland.radiers" tabindex="1" autocorrect="off" autocapitalize="none" autofocus />
+<span id="apk_info" class="help-block"><div class="alert alert-success"><strong><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Click [Generate Download Link]</strong> to fetch the APK download link</div></span>
+<button type="button" id="nWLxDEztkDWuGp" class="btn btn-primary btn-lg btn-block" data-loading-text="Generating" onclick="_gaq.push(['_trackEvent', 'apk_file', 'generate']);"><span class="glyphicon glyphicon-link"></span> Generate Download Link</button>
+<a id="SsHQDWFqbdXuOSutgqe" class="btn btn-success btn-block" href="#" rel="norewrite" style="display:none" onclick="_gaq.push(['_trackEvent', 'apk_file', 'download']);">Download</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js"></script><script>
+	        var oldwrite = document.write;
+		       var text = '';
+
+		    function loadSecureStart() {
+	             document.write = function(t) { text = t; }
+		    }
+
+		    function loadSecureEnd() {
+			   document.write = oldwrite;
+			   text = text.replace(/http:/g, 'https:');
+			   document.write(text);
+	        }
+
+            function loadSecureImage() {
+                document.write = oldwrite;
+                try {
+                    var results = /<img[^>]+src="([^">]+)/g.exec(text);
+                    var source = results[1];
+                    text = text.replace(/<img src=/gi, "<img src='https://external.evozi.com/image.php?url=" + encodeURIComponent(source) + "' tempSrc=");
+                } catch(err) {
+                    text = text.replace(/http%3A%2F%2F/g, 'https%3A%2F%2F');
+                }
+                document.write(text);
+            }
+	        </script>
+<br>
+<script type="text/javascript" src="https://www.adnetworkperformance.com/ad/display.php?r=200834"></script>
+<br>
+<button class="btn btn-default btn-xs dropdown-toggle pull-right" type="button" data-toggle="collapse" data-target="#viewdetails" onclick="_gaq.push(['_trackEvent', 'apk_file', 'settings']);">
+Request Update <span class="caret"></span>
+</button><br><br>
+<div id="viewdetails" class="collapse">
+<div class="alert alert-danger">
+
+<p>Post the app package name/ID in the comment box below if you like to request us to update or fetch the app</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var windowOpen = 0;
+
+    if(top != self) {
+        $("body").click(function() {
+            if(windowOpen == 0){
+                var a = document.createElement("a");
+                a.href = location.href;
+                var evt = document.createEvent("MouseEvents");
+                evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, false, 0, null);
+                a.dispatchEvent(evt);
+                windowOpen = 1;
+            }
+        });
+    }
+
+    /** COPYRIGHT EVOZI - DO NOT USE EVOZI API WITHOUT PERMISSION ELSE WE WILL START LIMITING IP, DON"T OVERLOAD OUR SERVER **/
+
+    var generateCount = 0;
+    $("#iBRBPJTnmoHTsWhk").keypress(function (e) {
+        if(e.which == 13) {
+            download_apk();
+        }
+    });
+    $('#nWLxDEztkDWuGp').click(function(){
+        download_apk();
+    });
+    function download_apk(){
+        $('#apk_info').html('');
+        $("#SsHQDWFqbdXuOSutgqe").hide();
+        $("#notify-danger").hide();
+
+        var TbPFdCjdszldNXl = $('#iBRBPJTnmoHTsWhk').val().replace(/((http|https):\/\/)?play.google.com\/store\/apps\/details\?id=/i, '');
+       TbPFdCjdszldNXl = TbPFdCjdszldNXl.replace('market://details?id=', '').trim();
+         var validUrlDesc = '<br>It should be something like this <br>https://play.google.com/store/apps/details?id=com.evozi.deviceid';
+      var packageguide = '<a href="assets/img/guide/googleplay_packagename.png" target="_blank"><img src="assets/img/guide/googleplay_packagename.png" width="100%" height="100%"></a>';
+
+             var NCLPGJjvCDO = 'TTmNDqbxXlLlLUs';       var version_desc = '';
+             var PMeyGsKVZ = 'IZ32tUnOgxwsv2oQ4AVk4w';
+  var fetched_desc = '';
+
+        if(TbPFdCjdszldNXl.indexOf("&") != -1){
+            var splited_string = TbPFdCjdszldNXl.split("&");
+            TbPFdCjdszldNXl = splited_string[0];
+        }
+
+        if(!TbPFdCjdszldNXl || (TbPFdCjdszldNXl.length < 6) || (TbPFdCjdszldNXl.indexOf('.') === -1) ){
+            $('#apk_info').html('<p class="text-danger">Please make sure package name or URL is valid</p>'+packageguide);
+            return false;
+        } else if (/\s/.test(TbPFdCjdszldNXl)) {
+            $('#apk_info').html('<p class="text-danger">Whitespace (empty space) found. Please make sure package name or URL is valid</p>'+packageguide);
+            return false;
+        }
+
+        if(generateCount >= 4){
+            $('#apk_info').html('<a href="//apps.evozi.com/apk-downloader/?id='+TbPFdCjdszldNXl+'" class="btn btn-block btn-warning" onclick="_gaq.push([\'_trackEvent\', \'apk_file\', \'continue\']);"><span class="glyphicon glyphicon-asterisk"></span> Click here to continue generate download link</a>');
+            return false;
+        }
+
+        try{
+            $('#nWLxDEztkDWuGp').button('loading');
+        } catch(err) {}
+        $('#apk_info').html('<span class="android android_holder"></span> Searching and downloading APK...<br>It may take up to 3 minutes, depending on file size');
+
+		   var  UJdnUHkoozigRQ  = "";
+        var KpYxRKnxtwSVZ = 'DSAPGdfHAdTmoEg';         UJdnUHkoozigRQ  =   {t: 1516960817, bceddeaba: TbPFdCjdszldNXl,     dbfefcbafdec:   PMeyGsKVZ,   fetch: $('#forceRefetch').is(':checked')};
+
+        $.ajax({
+              type: "POST",
+              //crossDomain: true,
+                            dataType: "json",
+
+              data: UJdnUHkoozigRQ,
+              cache: false, url: "//api-apk.evozi.com/download",
+
+            success: function(response) {
+                if(response.status == "success"){
+                    if(response.fetched_at != null){
+                        fetched_desc = '<br><strong>Last Fetched: </strong>' + response.fetched_at;
+                    }
+
+                    if(response.version != null){
+                        version_desc = '<br><strong>Version: </strong>' + response.version + ' ('+response.version_code+')';
+                    }
+
+                    $('#apk_info').html('<div class="row"><div class="col-md-10"><p class="text-success"><strong>Package Name:</strong> '+response.packagename+' <a href="https://play.google.com/store/apps/details?id='+response.packagename+'" target="_blank">[Play Store]</a><br><strong>File Size:</strong> '+response.filesize+'<br><strong>QR Code:</strong> <a href="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl=https:'+encodeURIComponent(response.url)+'" target="_blank"> <span class="glyphicon glyphicon-qrcode"></span> View</a><br><strong>MD5 File Hash:</strong> '+response.md5 + fetched_desc+version_desc+'</p></div><div class="col-md-2"><img class="app-icon" src="//d2lh3rxs7crswz.cloudfront.net/'+response.packagename+'.png" onerror="if (this.src != \'//apps.evozi.com/apk-downloader/assets/img/mini_icon.png\') this.src = \'//apps.evozi.com/apk-downloader/assets/img/mini_icon.png\';"></div></div>');
+                    $("#SsHQDWFqbdXuOSutgqe").show().prop("href", response.url);
+                    $('#SsHQDWFqbdXuOSutgqe').html('<span class="glyphicon glyphicon-save"></span> Click here to download <strong>'+response.packagename+'</strong> now');
+                    addClicker("//apps.evozi.com/apk-downloader/?id="+response.packagename);
+                    generateCount += 1;
+                } else if (response.status == "error"){
+                    $('#apk_info').html('<p class="text-danger">'+response.data);
+                    $("#SsHQDWFqbdXuOSutgqe").hide();
+                    _gaq.push(['_trackEvent', 'error', TbPFdCjdszldNXl]);
+                }
+            },
+            statusCode: {
+              404: function() {
+                alert( "Requested page not found" );
+              },
+              429: function() {
+                alert( "You are being rate limited" );
+              },
+              500: function() {
+                alert( "Internal Server Error" );
+              },
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                var msg = xhr.status + " No connection - OR - You are being rate limited, please try again later";
+                $('#apk_info').html('<p class="text-danger">Ops! Unable to download (Please try again or contact us)<br>'+msg+'</p>');
+                _gaq.push(['_trackEvent', 'ajax_error - ', msg + navigator.userAgent]);
+            },
+            complete: function() {
+                $("#forceRefetch").attr('checked', false);
+                $('#nWLxDEztkDWuGp').button('reset');
+            }
+    });
+
+    function addClicker(link) {
+        if (history.pushState) {
+            history.pushState(null, null, link);
+        }
+    }
+    }
+</script>
+<div class="row">
+<div class="col-12 col-lg-12">
+<div class="well">
+<div class="fb-like-box pull-left" data-href="https://www.facebook.com/DownloadAPK" data-width="190" data-height="50" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
+<p>
+Have you ever wanted to get your hands on the latest game, only to find that the Google Play thought it wasn't compatible with your phone?<br>
+Maybe you don't have a snapdragon device, but youre're pretty sure an old device could handle it still. Or the app is not available in your country?
+</p>
+<p>
+Until now you've been stuck, but a new online service called APK Downloader will allow you to download an apk file from the Google Play directly to your desktop and your device.
+</p>
+</div>
+
+<div class="hidden-xs col-md-offset-2" style="margin-bottom: 10px;">
+<script type="text/javascript" src="https://www.adnetworkperformance.com/ad/display.php?r=200840"></script> </div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+Online APK Downloader FAQ
+</div>
+<div class="panel-body">
+<div class="row">
+<div class="col-lg-6">
+<h4>How does this Online APK Downloader work?</h4>
+<p>
+It works behind the scene 24/7 to fetch your apps that you want to download
+</p>
+<h4>Is the file that I downloaded same as in Google Play?</h4>
+<p>
+Yes, Please do a MD5 file or developer certificate check if you have doubts
+</p>
+<h4>Can I download paid apps?</h4>
+<p>
+To prevent piracy, you are not allowed to download paid apps
+</p>
+<h4>How many new APKs can Evozi generate per day?</h4>
+<p>
+Currently we are able to generate around 1000+- apk files per day. Our account quota will normally run out quickly
+</p>
+</div>
+<div class="col-lg-6">
+<h4>Can I download my apps using HTTPS?</h4>
+<p>
+Yes, all request will be made in secure connection (https)
+</p>
+<h4>Why choose us?</h4>
+<p>
+Evozi fetch your apk file directly without 3rd party sources or manual user upload. (Secure & Easy)
+</p>
+<h4>I want to know more!</h4>
+<p>
+We will use T-Mobile (USA) to download the apk files for you.
+APK files will be cached on our server for up to 30 days. If you found the APK is an <span class="label label-success">old</span> version, please let us know
+</div>
+</div>
+</div>
+</div>
+<div class="hidden-xs col-md-offset-2" style="margin-bottom: 20px;">
+<script type="text/javascript" src="https://www.adnetworkperformance.com/ad/display.php?r=200840"></script></div>
+<div class="row">
+<div class="col-lg-6">
+<img src="assets/img/apk_downloader_logo.png" class="img-responsive" alt="APK Downloader">
+</div>
+<div class="col-lg-6">
+<div class="alert alert-info" role="alert">
+<h4><strong>APK files request</strong></h4>
+<p>
+Post the package ID/name in the comment box below if you like to request us to update or fetch the app. (We will try our best to grab the APK for you)
+</p>
+</div>
+<script>loadSecureStart();</script>
+<script data-cfasync="false" type="text/javascript" src="https://www.adnetworkperformance.com/script/java.php?option=rotateur&r=411313"></script>
+<script>loadSecureImage();</script>
+</div>
+</div>
+<div class="row">
+<div class="col-12 col-lg-12">
+<a id="discuss"></a>
+<div id="disqus_thread"></div>
+</div>
+</div>
+<div class="footer">
+<p>
+&copy; Evozi 2017
+</p>
+</div>
+</div>
+
+<script type="text/javascript">
+    var infolinks_pid = 1889242;
+    var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="https://resources.infolinks.com/js/infolinks_main.js"></script>
+<script type="text/javascript">
+    var disqus_shortname='apkdownloader';var disqus_url = 'http://apps.evozi.com/apk-downloader/';(function(){var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='//' + disqus_shortname + '.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();
+</script>
+</body>
+</html>
