@@ -80,9 +80,9 @@ def download(driver, num):
     try:
         gp_file = "GooglePlayRank_{num}.txt".format(num=num)
         gp_file_tmp = "GooglePlayRankTmp_{num}.txt".format(num=num)
-        # with open(gp_file) as f_in:
-            # pkg = f_in.readline().replace('\n', '').strip()
-        pkg = "adult.coloring.book.mandala.colorfy.coloring.free"
+        with open(gp_file) as f_in:
+            pkg = f_in.readline().replace('\n', '').strip()
+        # pkg = "adult.coloring.book.mandala.colorfy.coloring.free"
         url = "https://apps.evozi.com/apk-downloader/?id={pkg}"
         _url = url.format(pkg=pkg)
         driver.maximize_window()
@@ -143,8 +143,8 @@ def main(num):
 
 
 if __name__ == "__main__":
-    # process_num = 4
-    # for i in range(process_num):
-    #     p = Process(target=main, args=(i,))
-    #     p.start()
-    main(0)
+    process_num = 4
+    for i in range(process_num):
+        p = Process(target=main, args=(i,))
+        p.start()
+    # main(0)
