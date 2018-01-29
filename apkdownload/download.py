@@ -40,8 +40,8 @@ def init_chrome_driver(num):
         chrome_options.add_argument('user-data-dir=' + userdata_path)
         chrome_options.add_argument('--disk-cache-dir=' + cache_path)
         chrome_options.add_argument('--no-sandbox')
-        chrome_options.add_argument('--headless')
-        chrome_options.add_argument('--disable-gpu')
+        # chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--window-size=1200x1000')
         preferences_file = os.path.join(
             userdata_path, 'Default', 'Preferences')
@@ -80,8 +80,9 @@ def download(driver, num):
     try:
         gp_file = "GooglePlayRank_{num}.txt".format(num=num)
         gp_file_tmp = "GooglePlayRankTmp_{num}.txt".format(num=num)
-        with open(gp_file) as f_in:
-            pkg = f_in.readline().replace('\n', '').strip()
+        # with open(gp_file) as f_in:
+            # pkg = f_in.readline().replace('\n', '').strip()
+        pkg = "adult.coloring.book.mandala.colorfy.coloring.free"
         url = "https://apps.evozi.com/apk-downloader/?id={pkg}"
         _url = url.format(pkg=pkg)
         driver.maximize_window()
@@ -89,6 +90,12 @@ def download(driver, num):
         driver.find_element_by_class_name("btn-lg").click()
         time.sleep(5)
         down_link = driver.find_element_by_class_name("btn-success").get_attribute("href")
+        if down_link == _url + "#":
+            download_fail_file = "GooglePlayRank_fail_{num}.txt".format(num=num)
+            with open(download_fail_file, 'a+', encoding='utf-8') as f:
+                _pkg = pkg + "\n"
+                f.write(_pkg)
+            return
         print(down_link)
         apk_stream = requests.get(down_link, stream=True)
         file_name = pkg + '.apk'
@@ -97,6 +104,11 @@ def download(driver, num):
             for chunk in apk_stream.iter_content(chunk_size=512):
                 if chunk:
                     f.write(chunk)
+        download_success_file = "GooglePlayRank_success_{num}.txt".format(num=num)
+        with open(download_success_file, 'a+', encoding='utf-8') as f:
+            _pkg = pkg + "\n"
+            f.write(_pkg)
+        return
     except Exception as e:
         print("download:", e)
     finally:
@@ -127,10 +139,12 @@ def main(num):
         print("start", num)
         run(num)
         time.sleep(1)
+        print("done", num)
 
 
 if __name__ == "__main__":
-    process_num = 4
-    for i in range(process_num):
-        p = Process(target=main, args=(i,))
-        p.start()
+    # process_num = 4
+    # for i in range(process_num):
+    #     p = Process(target=main, args=(i,))
+    #     p.start()
+    main(0)
