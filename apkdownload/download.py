@@ -2,7 +2,6 @@
 # -*- encoding: utf-8 -*-
 
 import os
-import random
 import shutil
 
 import time
@@ -20,6 +19,10 @@ LINUX = 'Linux'
 
 def init_chrome_driver(num):
     chrome_options = Options()
+    # download_dir = os.path.join(os.getcwd(), "apk")
+    # prefs = {'download.default_directory': download_dir}
+    profile = {"download.default_directory": "NUL", "download.prompt_for_download": False, }
+    chrome_options.add_experimental_option('prefs', profile)
     if platform.system() == WINDOWS:
         userdata_path = 'D:\chrome\chromedata{0}'.format(num)
         cache_path = 'D:\chrome\cache{0}'.format(num)
@@ -76,7 +79,7 @@ def init_chrome_driver(num):
     return driver
 
 
-def download(driver, num):
+def download_evozi(driver, num):
     try:
         gp_file = "GooglePlayRank_{num}.txt".format(num=num)
         gp_file_tmp = "GooglePlayRankTmp_{num}.txt".format(num=num)
@@ -121,12 +124,51 @@ def download(driver, num):
         print("download:", pkg)
 
 
+def download_apkpure(driver, num):
+    try:
+        gp_file = "GooglePlayRank_{num}.txt".format(num=num)
+        gp_file_tmp = "GooglePlayRankTmp_{num}.txt".format(num=num)
+        with open(gp_file) as f_in:
+            pkg = f_in.readline().replace('\n', '').strip()
+        url = "https://m.apkpure.com/cn/search?q={pkg}"
+        _url = url.format(pkg=pkg)
+        _url = "https://m.apkpure.com/cn/search?q=com.whatsapp"
+        driver.maximize_window()
+        driver.get(_url)
+        driver.find_element_by_class_name("dd").click()
+        driver.find_element_by_class_name("da").click()
+        # print(down_url)
+        down_url = driver.find_element_by_id("download_link").get_attribute("href")
+        apk_stream = requests.get(down_url, stream=True)
+        file_name = pkg + '.apk'
+        file_path = os.path.join(os.getcwd(), "apk", file_name)
+        with open(file_path, 'wb') as f:
+            for chunk in apk_stream.iter_content(chunk_size=512):
+                if chunk:
+                    f.write(chunk)
+        download_success_file = "GooglePlayRank_success_{num}.txt".format(num=num)
+        with open(download_success_file, 'a+', encoding='utf-8') as f:
+            _pkg = pkg + "\n"
+            f.write(_pkg)
+        return
+    except Exception as e:
+        print("download:", e)
+    finally:
+        with open(gp_file) as f_in:
+            with open(gp_file_tmp, 'w') as f_tmp:
+                for line in f_in.readlines():
+                    if pkg not in line:
+                        f_tmp.write(line)
+        shutil.move(gp_file_tmp, gp_file)
+        print("download:", pkg)
+
+
 def run(num):
     driver = init_chrome_driver(num)
     try:
         if not driver:
             return False
-        return download(driver, num)
+        return download_apkpure(driver, num)
     except Exception as e:
         print("down error:", e)
     finally:
@@ -147,4 +189,3 @@ if __name__ == "__main__":
     for i in range(process_num):
         p = Process(target=main, args=(i,))
         p.start()
-    # main(0)
