@@ -19,10 +19,10 @@ LINUX = 'Linux'
 
 def init_chrome_driver(num):
     chrome_options = Options()
-    # download_dir = os.path.join(os.getcwd(), "apk")
-    # prefs = {'download.default_directory': download_dir}
-    profile = {"download.default_directory": "NUL", "download.prompt_for_download": False, }
-    chrome_options.add_experimental_option('prefs', profile)
+    download_dir = os.path.join(os.getcwd(), "apk")
+    prefs = {'download.default_directory': download_dir}
+    # profile = {"download.default_directory": "NUL", "download.prompt_for_download": False}
+    chrome_options.add_experimental_option('prefs', prefs)
     if platform.system() == WINDOWS:
         userdata_path = 'D:\chrome\chromedata{0}'.format(num)
         cache_path = 'D:\chrome\cache{0}'.format(num)
@@ -124,6 +124,13 @@ def download_evozi(driver, num):
         print("download:", pkg)
 
 
+def check_file(path):
+    for file in os.listdir(path):
+        if ".crdownload" in file:
+            return False
+    return True
+
+
 def download_apkpure(driver, num):
     try:
         gp_file = "GooglePlayRank_{num}.txt".format(num=num)
@@ -132,20 +139,23 @@ def download_apkpure(driver, num):
             pkg = f_in.readline().replace('\n', '').strip()
         url = "https://m.apkpure.com/cn/search?q={pkg}"
         _url = url.format(pkg=pkg)
-        _url = "https://m.apkpure.com/cn/search?q=com.whatsapp"
+        # _url = "https://m.apkpure.com/cn/search?q=com.whatsapp"
         driver.maximize_window()
         driver.get(_url)
         driver.find_element_by_class_name("dd").click()
         driver.find_element_by_class_name("da").click()
-        # print(down_url)
         down_url = driver.find_element_by_id("download_link").get_attribute("href")
-        apk_stream = requests.get(down_url, stream=True)
-        file_name = pkg + '.apk'
-        file_path = os.path.join(os.getcwd(), "apk", file_name)
-        with open(file_path, 'wb') as f:
-            for chunk in apk_stream.iter_content(chunk_size=512):
-                if chunk:
-                    f.write(chunk)
+        print(down_url)
+        print("download start")
+        time.sleep(10)
+        download_dir = os.path.join(os.getcwd(), "apk")
+        while True:
+            if check_file(download_dir):
+                break
+            print("downloading")
+            time.sleep(5)
+            continue
+        print("download success")
         download_success_file = "GooglePlayRank_success_{num}.txt".format(num=num)
         with open(download_success_file, 'a+', encoding='utf-8') as f:
             _pkg = pkg + "\n"
@@ -189,3 +199,4 @@ if __name__ == "__main__":
     for i in range(process_num):
         p = Process(target=main, args=(i,))
         p.start()
+    # main(0)
