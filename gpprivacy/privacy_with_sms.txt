@@ -1,2 +1,0 @@
-com.verizon.messaging.vzmsgs
-com.google.android.youtube
