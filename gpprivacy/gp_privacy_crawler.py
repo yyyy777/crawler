@@ -91,7 +91,8 @@ def get_privacy(driver, package_name):
         driver.find_element_by_link_text("查看详情").click()
         tmp = (By.CLASS_NAME, "fnLizd")
         WebDriverWait(driver, 20).until(EC.presence_of_element_located(tmp))
-        page_source = driver.page_source
+        page_source = driver.find_element_by_class_name("fnLizd").get_attribute("innerHTML")
+        print(page_source)
         if "短信" or "SMS" in page_source:
             print("找到含有SMS权限的APP: {0}".format(package_name))
             with open("privacy_with_sms.txt", "a+") as f:
@@ -122,7 +123,7 @@ def main():
 
 if __name__ == "__main__":
     print("start")
-    # driver = _init_chrome_driver(0)
+    driver = _init_chrome_driver(0)
     # pack = get_privacy(driver, "com.verizon.messaging.vzmsgs")
     # pack = get_privacy(driver, "com.magnet.torrent.cat")
     main()
