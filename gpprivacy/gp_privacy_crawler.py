@@ -85,15 +85,14 @@ def _init_chrome_driver(num):
 
 def get_privacy(driver, package_name):
     try:
-        url = "https://play.google.com/store/apps/details?id={0}".format(package_name)
+        url = "https://play.google.com/store/apps/details?id={0}&hl=en".format(package_name)
         driver.get(url)
         driver.maximize_window()
-        driver.find_element_by_link_text("查看详情").click()
+        driver.find_element_by_link_text("View details").click()
         tmp = (By.CLASS_NAME, "fnLizd")
         WebDriverWait(driver, 20).until(EC.presence_of_element_located(tmp))
-        page_source = driver.find_element_by_class_name("fnLizd").get_attribute("innerHTML")
-        print(page_source)
-        if "SMS" in page_source or "短信" in page_source:
+        page_source = driver.page_source
+        if "send SMS messages" in page_source:
             print("找到含有SMS权限的APP: {0}".format(package_name))
             with open("privacy_with_sms.txt", "a+") as f:
                 f.write(package_name + "\n")
