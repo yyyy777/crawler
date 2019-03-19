@@ -68,12 +68,18 @@ class GooglePlaySpider(CrawlSpider):
         # from gpcrawler.gpcrawler.items import GooglePlayItem
         item = GooglePlayItem()
         item['pkg'] = pkg
-        item['catagory'] = response.xpath("//a[@class='document-subtitle category']/@href").extract()[0].split('/')[-1].lower()
-        down_num = response.xpath("//div[@itemprop='numDownloads']").xpath("text()").extract()[0].strip().split('-')
-        if len(down_num) != 2:
+        item['category'] = response.xpath(
+            '//*[@id="fcxH9b"]/div[4]/c-wiz/div/div[2]/div/div[1]/div/c-wiz[1]/c-wiz[1]/div/div[2]/div/div[1]/div[1]/div[1]/div[1]/span[2]/a/@href').extract()[
+            0].split('/')[-1].lower()
+
+        if "game" in item["category"]:
             return
-        item['down_min'] = str(down_num[0].strip().replace(',', ''))
-        item['down_max'] = str(down_num[1].strip().replace(',', ''))
-        if not item['down_min'] or not item['down_max']:
-            return
+
+        # down_num = response.xpath("//div[@itemprop='numDownloads']").xpath("text()").extract()[0].strip().split('-')
+        # if len(down_num) != 2:
+        #     return
+        # item['down_min'] = str(down_num[0].strip().replace(',', ''))
+        # item['down_max'] = str(down_num[1].strip().replace(',', ''))
+        # if not item['down_min'] or not item['down_max']:
+        #     return
         return item

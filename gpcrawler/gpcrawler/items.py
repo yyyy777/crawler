@@ -12,6 +12,6 @@ class GooglePlayItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pkg = scrapy.Field()
-    catagory = scrapy.Field()
-    down_min = scrapy.Field()
-    down_max = scrapy.Field()
+    category = scrapy.Field()
+    # down_min = scrapy.Field()
+    # down_max = scrapy.Field()
